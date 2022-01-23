@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
+const path = require("path");
 app.use(express.json());
 function connect() {
   return mongoose.connect("mongodb://127.0.0.1:27017/intern");
@@ -58,6 +59,8 @@ const internSchema = new mongoose.Schema(
   }
 );
 
+const publicPath = path.join(__dirname, "views");
+
 const Intern = mongoose.model("interns", internSchema);
 
 app.get("/intern", async (req, res) => {
@@ -84,6 +87,10 @@ app.get("/cart", async (req, res) => {
   } catch (err) {
     return res.status(500).send(err.message);
   }
+});
+
+app.get("/contact", (req, res) => {
+  res.sendFile(`${publicPath}/contact.html`);
 });
 
 app.get("/", function (req, res) {
