@@ -273,7 +273,11 @@
                 </div>
                 <div class="left_align">
                   <a class="color_green" href="#">KNOW MORE</a>
-                  <button class="button" id="button_${i}" onclick="checkOut()">
+                  <button
+                    class="button"
+                    id="button_${i}"
+                    onclick="checkOut('<%= JSON.stringify(user) %>')"
+                  >
                     <%= user.btn_option %>
                   </button>
                 </div>
@@ -286,4 +290,9 @@
     </div>
   </body>
 </html>
-<script></script>
+<script>
+  function checkOut(user) {
+    const parsedUser = JSON.parse(user);
+    console.log(parsedUser.title);
+  }
+</script>
