@@ -275,7 +275,7 @@
                   <a class="color_green" href="#">KNOW MORE</a>
                   <button
                     class="button"
-                    id=""
+                    id="<%= user._id %>"
                     onclick="checkOut('<%= JSON.stringify(user) %>')"
                   >
                     ADD TO CART
@@ -308,8 +308,16 @@
     let cart_data = JSON.parse(localStorage.getItem("avail_data")) || [];
     console.log("cart_data:", cart_data);
 
-    cart_data.push(prod);
+    let status = document.getElementById(prod._id);
+    if (status.innerText == "ADD TO CART") {
+      status.innerText = "CHECKOUT >>";
+      total = Number(total) + 1;
 
-    localStorage.setItem("avail_data", JSON.stringify(cart_data));
+      cart_data.push(prod);
+
+      localStorage.setItem("avail_data", JSON.stringify(cart_data));
+
+      localStorage.setItem("total", total);
+    }
   }
 </script>

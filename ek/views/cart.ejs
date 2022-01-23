@@ -417,7 +417,7 @@ focusable="false"
     cart_data[id].btn_option = "ADD TO CART";
     let total_amount = 0;
     for (var i = 0; i < cart_data.length; i++) {
-      if (cart_data[i].btn_option == "CHECKOUT >>") {
+      if (cart_data[i].btn_option == "ADD TO CART") {
         total_amount += Number(cart_data[i].new_price);
       }
     }
@@ -466,51 +466,51 @@ focusable="false"
     });
   });
 
-  //   overlay.addEventListener("click", () => {
-  //     const modals = document.querySelectorAll(".modal.active");
-  //     modals.forEach((modal) => {
-  //       closeModal(modal);
-  //     });
-  //   });
+  overlay.addEventListener("click", () => {
+    const modals = document.querySelectorAll(".modal.active");
+    modals.forEach((modal) => {
+      closeModal(modal);
+    });
+  });
 
-  //   function openModal(modal) {
-  //     if (modal == null) return;
-  //     modal.classList.add("active");
-  //     overlay.classList.add("active");
-  //   }
+  function openModal(modal) {
+    if (modal == null) return;
+    modal.classList.add("active");
+    overlay.classList.add("active");
+  }
 
-  //   function closeModal(modal) {
-  //     if (modal == null) return;
-  //     modal.classList.remove("active");
-  //     overlay.classList.remove("active");
-  //   }
+  function closeModal(modal) {
+    if (modal == null) return;
+    modal.classList.remove("active");
+    overlay.classList.remove("active");
+  }
 
-  //   function debitcard() {
-  //     window.location.href = "../payment check/debitcard.html";
-  //   }
+  function debitcard() {
+    window.location.href = "../payment check/debitcard.html";
+  }
 
-  //   function popup() {
-  //     return `<div class="modal" id="modal">
-  //   <div class="modal-header">
-  //     <div class="title">Pay Via</div>
-  //   </div>
-  //   <div class="modal-body">
-  //     <div class="paymentPage" onclick="debitcard()">
-  //       <img src="../Images/card.png" class="card" /> CREDIT CARD
-  //     </div>
-  //     <div class="paymentPage">
-  //       <img
-  //         src="../Images/card.png"
-  //         class="card"
-  //         style="margin-right: 3px"
-  //       />DEBIT CARD
-  //     </div>
-  //     <div class="paymentPage">NET BANKING</div>
-  //     <div class="paymentPage">PAYTM</div>
-  //     <div class="paymentPage">UPI</div>
-  //     <div class="paymentPage">EMI(CREDIT CARD)</div>
-  //   </div>
-  // </div>
-  // <div id="overlay"></div>`;
-  //   }
+  function popup() {
+    return `<div class="modal" id="modal">
+     <div class="modal-header">
+       <div class="title">Pay Via</div>
+     </div>
+     <div class="modal-body">
+       <div class="paymentPage" onclick="debitcard()">
+         <img src="../Images/card.png" class="card" /> CREDIT CARD
+       </div>
+       <div class="paymentPage">
+         <img
+           src="../Images/card.png"
+           class="card"
+           style="margin-right: 3px"
+         />DEBIT CARD
+       </div>
+       <div class="paymentPage">NET BANKING</div>
+       <div class="paymentPage">PAYTM</div>
+       <div class="paymentPage">UPI</div>
+       <div class="paymentPage">EMI(CREDIT CARD)</div>
+     </div>
+   </div>
+   <div id="overlay"></div>`;
+  }
 </script>
