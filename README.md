@@ -6,7 +6,7 @@ InternTheory is an online internship portal created to bridge the gap between st
 
 ## What this is for
 
-This project was a clone build during Masai School Unit-3 construct week.We had worked on this project for a span of one Week.
+This project was a clone build during Masai School Unit-4 construct week.We had worked on this project for a span of one Week.
 
 
 ## Authors
@@ -20,11 +20,11 @@ This project was a clone build during Masai School Unit-3 construct week.We had 
 
 **FrontEnd:** Html,CSS
 
-**BackEnd:** JavaScript,Localstorage,JSON,API
+**BackEnd:** JavaScript,Expressjs,Localstorage,JSON,API,Passportjs.
 
 ## Tools and Libraries we used
 
-**For font & icons:** GoogleAPIs,Masaimocker and FontAwesome
+**For font & icons:** GoogleAPIs,Masaimocker, and FontAwesome
 
 **font-family:** "Roboto", "Helvetica", "Arial", sans-serif
 
@@ -38,7 +38,7 @@ For support,Mail
 
 shubhammishra78640@gmail.com
 
-mangeshniras@gmail.com
+vkkhambra786@gmail.com
 
 sarfarazpycoder@gmail.com
 
