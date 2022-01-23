@@ -12,11 +12,9 @@
   gap: 10px;
 }
 #mainDiv > div:nth-child(1) {
-  border: 1px solid blue;
   padding: 30px;
 }
 #mainDiv > div:nth-child(2) {
-  border: 1px solid blue;
   padding: 30px;
 }
 #profilePic {
