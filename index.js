@@ -58,7 +58,7 @@ const internSchema = new mongoose.Schema(
   }
 );
 
-const Intern = mongoose.model("intrns", internSchema);
+const Intern = mongoose.model("interns", internSchema);
 
 app.get("/intern", async (req, res) => {
   try {
