@@ -72,6 +72,19 @@ app.get("/intern", async (req, res) => {
   }
 });
 
+app.get("/cart", async (req, res) => {
+  try {
+    //const items = await Intern.find().lean().exec();
+    //console.log(items);
+    return res.render("cart");
+    // return res.render("intern", {
+    //   items: items,
+    // });
+  } catch (err) {
+    return res.status(500).send(err.message);
+  }
+});
+
 app.get("/", function (req, res) {
   res.render("index", { user: "John Smith" });
   // pass main ejs file name, pass any data variables
